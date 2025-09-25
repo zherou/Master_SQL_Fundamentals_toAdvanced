@@ -112,7 +112,7 @@
 
       .seg label[data-val="intermediate"].active {
         box-shadow: 0 8px 40px rgba(61, 225, 255, 0.14);
-        background: linear-gradient(90deg, var(--neon-blue), #cfefff);
+        background: linear-gradient(90deg, var(--neon-yellow), #ffea9b);
         color: #00151a;
       }
 
@@ -443,25 +443,52 @@
         padding-bottom: 10px;
       }
 
-      
-      @media (max-width: 760px) {
-        .chapter-header {
-          padding: 12px;
-        }
+   @media (max-width: 700px) {
 
-        .chapter-body {
-          padding: 10px;
-        }
-
-        .icon {
-          width: 40px;
-          height: 40px;
-        }
-
-        .seg label {
-          padding: 7px 9px;
-        }
+      header {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
       }
+
+       .controls {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      gap: 12px;
+      }
+
+      .seg {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      width: 100%;
+      }
+
+      .seg label {
+       text-align: center;
+      padding: 8px 6px;
+      font-size: 13px;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      color: inherit; 
+      }
+
+      .options {
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+      width: 100%;
+      flex-wrap: wrap;
+      }
+
+      #toggleAll {
+      min-width: 120px;
+      flex: 1 1 auto;
+      text-align: center;
+      }
+    }
     </style>
   </head>
   <body>
@@ -1209,3 +1236,4 @@
     </script>
   </body>
 </html>
+
